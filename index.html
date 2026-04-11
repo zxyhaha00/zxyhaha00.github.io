@@ -3,58 +3,71 @@
  <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>我的个人GitHub站点</title>
+     <title>Claude Code介绍</title>
      <style>
-         /* 全局样式，可自由修改 */
-         body {
+         * {
              margin: 0;
              padding: 0;
-             min-height: 100vh;
-             /* 保留你之前的星空背景效果，也可以换成纯色 */
-             background: #000;
-             overflow: hidden;
+             box-sizing: border-box;
+             line-height: 1.8;
          }
-         /* 学号固定在左上角 */
-         .student-id {
-             position: absolute;
-             top: 20px;
-             left: 20px;
-             color: #fff;
-             font-size: 20px;
+         body {
+             font-family: "Microsoft Yahei", sans-serif;
+             max-width: 1200px;
+             margin: 0 auto;
+             padding: 20px;
+         }
+         h1 {
+             font-size: 30px;
+             text-align: center;
+             color: #1677ff;
              font-weight: bold;
-             z-index: 999;
+             padding-bottom: 10px;
+             border-bottom: 1px solid #1677ff;
+             margin-bottom: 30px;
          }
-         /* 星空效果（保留你之前的动态效果） */
-         .star {
-             position: absolute;
-             background: #fff;
-             border-radius: 50%;
-             animation: twinkle 2s infinite;
+         .sub-title {
+             font-size: 22px;
+             color: #1f2937;
+             font-weight: bold;
+             margin: 25px 0 15px;
+             text-indent: 0;
          }
-         @keyframes twinkle {
-             0%, 100% { opacity: 0.3; }
-             50% { opacity: 1; }
+         p {
+             font-size: 16px;
+             color: #333;
+             text-indent: 2em;
+             margin-bottom: 15px;
+         }
+         /* 👇 核心：列表铅笔图标样式，确保完整无错 */
+         #advantage-list {
+             font-size: 16px;
+             color: #333;
+             /* 铅笔图标，16px尺寸，完全符合作业要求 */
+             list-style-image: url("https://img.icons8.com/fluency/16/000000/pencil.png");
+             padding-left: 2em; /* 给图标留位置，避免文字重叠 */
+             margin: 15px 0;
+         }
+         .highlight {
+             font-weight: bold;
+             background-color: #fff2cc;
+             padding: 0 2px;
          }
      </style>
  </head>
  <body>
-     <!-- 左上角学号 -->
-     <div class="student-id">学号：25101020107</div>
-     <!-- 星空动态效果（可保留/删除） -->
-     <script>
-         // 生成随机星星
-         const stars = document.body;
-         for (let i = 0; i < 100; i++) {
-             const star = document.createElement('div');
-             star.className = 'star';
-             star.style.width = Math.random() * 3 + 'px';
-             star.style.height = star.style.width;
-             star.style.left = Math.random() * 100 + '%';
-             star.style.top = Math.random() * 100 + '%';
-             star.style.animationDelay = Math.random() * 2 + 's';
-             stars.appendChild(star);
-         }
-     </script>
+     <h1>Claude Code —— 智能AI编程助手</h1>
+     <h2 class="sub-title">什么是 Claude Code?</h2>
+     <p>Claude Code是由Anthropic公司推出的<span class="highlight">AI编程助手</span>，可以帮助初学者快速写代码、查错误、学逻辑，非常适合新手学习。</p >
+     <h2 class="sub-title">Claude Code 核心优势</h2>
+     <!-- 👇 列表必须绑定这个ID，样式才能生效 -->
+     <ul id="advantage-list">
+         <li>支持HTML、CSS、JavaScript、Python等多种语言</li>
+         <li>智能代码提示与自动修复</li>
+         <li>代码逻辑详细讲解</li>
+         <li>免费使用基础功能</li>
+         <li>界面简洁、容易上手</li>
+     </ul>
+     <p>如果你正在学习编程，<span class="highlight">Claude Code</span>会是你学习路上非常好的帮手，随时解答你的编程问题。</p >
  </body>
  </html>
- 
