@@ -2,42 +2,25 @@
  <html lang="zh-CN">
  <head>
      <meta charset="UTF-8">
-     <title>我的主页</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>个人主页</title>
      <style>
          body {
-             background-color: #000;
-             background-image:
-                 radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
-                 radial-gradient(2px 2px at 60px 70px, #ffffff, transparent),
-                 radial-gradient(1px 1px at 50px 50px, #ffffff, transparent),
-                 radial-gradient(1px 1px at 130px 80px, #ffffff, transparent),
-                 radial-gradient(2px 2px at 90px 10px, #ffffff, transparent);
-             background-size: 200px 200px;
-             overflow: hidden;
              font-family: "Microsoft YaHei", sans-serif;
+             background: #000;
+             color: #fff;
          }
          .student-id {
-             position: absolute;
-             top: 30px;
-             left: 30px;
-             color: #ffffff;
              font-size: 24px;
-             font-weight: bold;
-             letter-spacing: 1px;
+             margin: 30px;
          }
-         /* 两个链接共用样式 */
+         /* 链接样式，不用绝对定位，用正常的块级元素排版 */
          .claude-link, .article-link {
-             position: absolute;
-             left: 30px;
-             color: #4fc3f7;
+             display: block;
              font-size: 20px;
+             color: #4fc3f7;
              text-decoration: none;
-         }
-         .claude-link {
-             top: 70px;
-         }
-         .article-link {
-             top: 110px;
+             margin: 20px 30px;
          }
          .claude-link:hover, .article-link:hover {
              color: #81d4fa;
@@ -46,11 +29,11 @@
  </head>
  <body>
      <div class="student-id">学号: 25101020107</div>
-     <a href="claude.html " target="_blank" class="claude-link">
+     <a href=" " target="_blank" class="claude-link">
          👉 查看 Claude Code 智能AI编程助手介绍
      </a >
-    <a href="article.html" target="_blank">
-         📄 查看如何培养认真严谨的习惯
+     <a href="article.html" target="_blank" class="article-link">
+         👉 查看如何培养认真严谨的习惯
      </a >
  </body>
  </html>
