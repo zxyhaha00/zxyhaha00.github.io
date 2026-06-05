@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex实现焦点图Banner</title>
     <style>
-        /* 外层banner容器：弹性布局，相对定位方便箭头悬浮 */
+        
         .banner-wrap {
             width: 95%;
             max-width: 1200px;
@@ -15,12 +15,12 @@
             justify-content: center;
             align-items: center;
         }
-        /* banner图片 */
+        
         .banner-img {
             width: 100%;
             display: block;
         }
-        /* 左右箭头通用样式：弹性居中 */
+       
         .arrow {
             width: 60px;
             height: 60px;
@@ -33,11 +33,11 @@
             align-items: center;
             cursor: pointer;
         }
-        /* 左箭头靠左 */
+        
         .arrow-left {
             left: 20px;
         }
-        /* 右箭头靠右 */
+        
         .arrow-right {
             right: 20px;
         }
@@ -45,7 +45,7 @@
             width: 100%;
             height: 100%;
         }
-        /* 底部圆点指示器容器：flex横向排列、居中 */
+       
         .point-box {
             position: absolute;
             bottom: 30px;
@@ -54,7 +54,7 @@
             display: flex;
             gap: 12px; /* flex子元素间距 */
         }
-        /* 圆点默认样式 */
+       
         .point {
             width: 22px;
             height: 22px;
@@ -62,7 +62,7 @@
             background: #b3e6f9;
             cursor: pointer;
         }
-        /* 当前激活圆点（深色） */
+       
         .point.active {
             background: #00b4e6;
         }
