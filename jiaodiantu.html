@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <style>
+       
+        .banner {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+       
+        .banner-img {
+            display: flex;
+            height: 100%;
+        }
+        .banner-img div {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .banner-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .left, .right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: rgba(0,0,0,0.35);
+            padding: 6px;
+            cursor: pointer;
+            z-index:999; 
+        }
+        .left {left: 20px;}
+        .right {right: 20px;}
+        .left img, .right img {
+            width: 30px;
+            vertical-align: middle;
+        }
+       
+        .point-wrap {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index:999;
+        }
+       
+        .point-wrap span {
+            width: 14px;
+            height: 14px;
+            background: #cccccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+       
+        .point-wrap span.active {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+       
+        <button class="left"><img src="arrow1.png"></button>
+        <button class="right"><img src="arrow2.png"></button>
+
+       
+        <div class="banner-img">
+            <div><img src="banner1.jpg"></div>
+            <div><img src="banner1.jpg"></div>
+            <div><img src="banner1.jpg"></div>
+            <div><img src="banner1.jpg"></div>
+        </div>
+
+        
+        <div class="point-wrap">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <script>
+        const wrap = document.querySelector('.banner-img');
+        const leftBtn = document.querySelector('.left');
+        const rightBtn = document.querySelector('.right');
+        const points = document.querySelectorAll('.point-wrap span');
+        let index = 0;
+        
+        function changeImg(){
+            wrap.style.transform = `translateX(-${index * 100}%)`;
+            points.forEach(item=>item.classList.remove('active'));
+            points[index].classList.add('active');
+        }
+        
+        rightBtn.onclick = function(){
+            index = index >= 3 ? 0 : index+1;
+            changeImg();
+        }
+        
+        leftBtn.onclick = function(){
+            index = index <=0 ? 3 : index-1;
+            changeImg();
+        }
+        
+        points.forEach((item,i)=>{
+            item.onclick = ()=>{
+                index = i;
+                changeImg();
+            }
+        })
+    </script>
+</body>
+</html>
