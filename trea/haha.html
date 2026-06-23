@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>TRAE Work</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      /* 点阵背景效果，更清晰 */
+      background-image: radial-gradient(rgba(255, 255, 255, 0.25) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+    }
+    .flex { display: flex; }
+    .flex-between { justify-content: space-between; }
+    .flex-center { align-items: center; }
+
+    /* 导航下拉默认隐藏 */
+    .drop-menu {
+      display: none;
+      z-index: 999;
+    }
+    .drop-box:hover .drop-menu {
+      display: block;
+    }
+
+    /* 主体通用样式 */
+    .hero-section {
+      text-align: center;
+      padding: 48px 20px 24px;
+    }
+    /* 关键修改：文字固定绿色渐变，去掉动画 */
+    .hero-badge {
+      display: inline-block;
+      font-size: 12px;
+      margin-bottom: 8px;
+      /* 固定绿色渐变，不做动画 */
+      background: linear-gradient(90deg, #27c95c, #88e888);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+    .hero-title {
+      font-size: 42px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #fff, #aaa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 24px;
+    }
+    .input-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+      margin-bottom: 32px;
+    }
+    .prompt-input {
+      width: 100%;
+      max-width: 600px;
+      background-color: #111;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      padding: 12px 16px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+    }
+    .prompt-input::placeholder {
+      color: #666;
+    }
+    .button-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 600px;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #666;
+    }
+    /* 一行三个 整齐两排 */
+    .cards-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 0 20px 48px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .card-item {
+      width: calc((100% - 32px) / 3);
+      background-color: #111;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 16px;
+      font-size: 13px;
+      color: #aaa;
+    }
+    .footer-section {
+      text-align: center;
+      padding: 0 20px 64px;
+    }
+    .btn-gradient {
+      padding: 10px 32px;
+      border: none;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #23d160, #00c6ff);
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav flex flex-between flex-center" >
+  <div class="nav-logo" style="font-size:36px;font-weight:bold;background: linear-gradient(90deg, #fff 0%, #ffffff 50%, #ffffff 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">TRAE</div>
+  <nav class="nav-main flex gap-30 flex-center" style="gap: 40px;">
+    <div class="drop-box" style="position:relative;">
+      <a href="#" style="color:#fff;text-decoration:none;font-size:18px;">产品 ▾</a>
+      
+      <div class="drop-menu" style="position:absolute;top:100%;left:0;background:#111;padding:12px;border-radius:4px;min-width:260px;">
+        <a href="work.html" class="drop-item" style="display:flex;align-items:center;gap:12px;padding:8px 6px;text-decoration:none;color:#fff;">
+          <div style="width:48px;height:48px;background:#1a1a1a;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-size:20px;">⚙</span>
+          </div>
+          <div>
+            <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:15px;">TRAE Work</span>
+          <span style="background:#27c95c;color:#000;font-size:10px;padding:2px 6px;border-radius:3px;">New</span>
+  <span style="margin-left:10px;opacity:0.7;display:flex;gap:6px;">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+    </svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+    </svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+    </svg>
+  </span>
+</div>
+            <p style="color:#aaa;font-size:13px;margin:4px 0 0;">AI 工作助手</p>
+          </div>
+        </a>
+        <a href="#" class="drop-item" style="display:flex;align-items:center;gap:12px;padding:8px 6px;text-decoration:none;color:#fff;">
+          <div style="width:48px;height:48px;background:#1a1a1a;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-size:20px;">&lt;/&gt;</span>
+          </div>
+          <div>
+            <span style="font-size:15px;">TRAE IDE</span>
+            <p style="color:#aaa;font-size:13px;margin:4px 0 0;">AI 原生 IDE</p>
+          </div>
+        </a>
+        <a href="#" class="drop-item" style="display:flex;align-items:center;gap:12px;padding:8px 6px;text-decoration:none;color:#fff;">
+          <div style="width:48px;height:48px;background:#1a1a1a;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-size:20px;">🧩</span>
+          </div>
+          <div>
+            <span style="font-size:15px;">TRAE 插件</span>
+            <p style="color:#aaa;font-size:13px;margin:4px 0 0;">AI 编码助手</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <a href="#" style="color:#fff;text-decoration:none;font-size:18px;">企业版</a>
+    <a href="pricing.html" style="color:#fff;text-decoration:none;font-size:18px;">定价</a>
+    <a href="#" style="color:#fff;text-decoration:none;font-size:18px;">文档</a>
+    <a href="changelog.html" style="color:#fff;text-decoration:none;font-size:18px;">更新日志</a>
+    <a href="#" style="color:#fff;text-decoration:none;font-size:18px;">社区</a>
+    <a href="#" style="color:#fff;text-decoration:none;font-size:18px;">知识库</a>
+  </nav>
+  <div class="nav-right flex gap-10" style="gap:10px;">
+    <button class="btn-login" style="background:transparent;color:#fff;border:1px solid #444;padding:8px 18px;border-radius:4px;font-size:14px;">登录</button>
+    <button class="btn-green" style="background:#27c95c;color:#000;border:none;padding:8px 18px;border-radius:4px;font-size:14px;font-weight:bold;">下载中心</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero-section">
+    <div class="hero-badge">全新 TRAE Work | BETA</div>
+    <h1 class="hero-title">不止于码 大有可为</h1>
+  </section>
+
+  <section class="input-section">
+    <input type="text" class="prompt-input" placeholder="输入你的需求，按下回车交给 TRAE Work">
+    <div class="button-bar">
+      <div class="button-left">
+        <span>例：</span>
+        <span>demo</span>
+      </div>
+      <div class="button-right">
+        <span>设置</span>
+        <span>发送</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards-section">
+    <div class="card-item">新建空白项目，产出完整网站</div>
+    <div class="card-item">翻译并代码平台，生成工具软件</div>
+    <div class="card-item">梳理A项目的业务，给出修改建议</div>
+    <div class="card-item">开发一个多语言学习网站</div>
+    <div class="card-item">分析这个项目仓库，生成readme文件</div>
+    <div class="card-item">制作一个像素风格的游戏界面</div>
+  </section>
+
+  <section class="footer-section">
+    <button class="btn-gradient">立即体验</button>
+  </section>
+</main>
+
+</body>
+</html>
